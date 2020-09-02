@@ -9,10 +9,10 @@ $artifactUrl = Get-BCArtifactUrl -version $version -country $Country -select Lat
 
 New-BcContainer $containerName `
     -artifactUrl $artifactUrl `
-	  -alwaysPull `
+    -alwaysPull `
     -accept_eula `
     -auth UserPassword `
-	  -Credential $credential `
+    -Credential $credential `
     -licenseFile $LicenseFile `
     -updateHosts `
     -includeTestToolkit `

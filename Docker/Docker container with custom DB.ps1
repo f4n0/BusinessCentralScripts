@@ -1,6 +1,6 @@
 $containerName = 'NP-2018'
 $LicenseFile = "Path To License.flf"
-$version = "11.15"
+$version = "16.0"
 $Country = "it"
 $BackFilePath = Path To Database.bak"
 

@@ -1,8 +1,8 @@
-$containerName = 'NP-2018'
+$containerName = 'CONTAINER NAME'
 $LicenseFile = "Path To License.flf"
 $version = "16.0"
 $Country = "it"
-$BackFilePath = Path To Database.bak"
+$BackFilePath = "Path To Database.bak"
 
 
 $credential = New-Object pscredential 'admin', (ConvertTo-SecureString -String 'Password123!' -AsPlainText -Force)
@@ -11,10 +11,10 @@ $artifactUrl = Get-BCArtifactUrl -version $version -country $Country -select Lat
 
 New-BcContainer $containerName `
     -artifactUrl $artifactUrl `
-	  -alwaysPull `
+	-alwaysPull `
     -accept_eula `
     -auth UserPassword `
-	  -Credential $credential `
+	-Credential $credential `
     -licenseFile $LicenseFile `
     -updateHosts `
     -includeTestToolkit `

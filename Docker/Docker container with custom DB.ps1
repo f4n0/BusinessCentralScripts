@@ -2,7 +2,7 @@ $containerName = 'CONTAINER NAME'
 $LicenseFile = "Path To License.flf"
 $version = "16.0"
 $Country = "it"
-$BackFilePath = "Path To Database.bak"
+$BakFilePath = "Path To Database.bak"
 
 
 $credential = New-Object pscredential 'admin', (ConvertTo-SecureString -String 'Password123!' -AsPlainText -Force)
@@ -22,5 +22,5 @@ New-BcContainer $containerName `
     -shortcut None `
     -accept_outdated `
     -dns 8.8.8.8 `
-    -bakFile $BackFilePath `
+    -bakFile $BakFilePath `
     -includeCSide
